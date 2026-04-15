@@ -2,11 +2,18 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
-# The API isBadVersion is predefined -- we simulate it here
+
 # First Bad Version (LC #278) -- Easy
-# Given n versions, find the first bad one using `isBadVersion(n)` API.
+# You have n versions [1, 2, ..., n]. One version is bad, and all after it are bad.
+# Given isBadVersion(v) API, find the first bad version.
 #
-#   Key: Binary search on boolean predicate
+# Example:
+#   n = 5, bad = 4
+#   isBadVersion(3) -> False
+#   isBadVersion(4) -> True
+#   -> 4  (first bad version)
+#
+#   Key: Binary search on boolean predicate. Classic boundary search.
 
 def make_checker(bad):
     def isBadVersion(v):
@@ -24,9 +31,13 @@ def solve(n, bad):
 
 
 run_tests(solve, [
-    ((5, 4),  4),
-    ((5, 1),  1),
-    ((1, 1),  1),
-    ((10, 7), 7),
-    ((100, 50), 50),
+    ((5, 4),      4),     # bad in second half
+    ((5, 1),      1),     # very first is bad
+    ((1, 1),      1),     # only one version, it's bad
+    ((10, 7),     7),     # bad in second half
+    ((100, 50),  50),     # larger range
+    ((10, 10),   10),     # last version is bad
+    ((10, 1),     1),     # all versions are bad
+    ((2, 1),      1),     # two versions, first is bad
+    ((2, 2),      2),     # two versions, second is bad
 ])

@@ -21,21 +21,30 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Climbing Stairs (LC #70) -- Easy
-# Count ways to reach step n, taking 1 or 2 steps at a time.
+# You're climbing a staircase of n steps. Each time you can climb 1 or 2 steps.
+# How many distinct ways can you reach the top?
 #
-#   State: `dp[i]` = ways to reach step i
-#   Transition: `dp[i] = dp[i-1] + dp[i-2]`
-#   Optimize: Only need last 2 values
+# Example:
+#   n=2: [1+1, 2]            -> 2 ways
+#   n=3: [1+1+1, 1+2, 2+1]  -> 3 ways
+#   n=4: 5 ways  (1111, 112, 121, 211, 22)
+#
+#   Key: dp[i] = dp[i-1] + dp[i-2]. Same as Fibonacci.
+#        Optimize: only need last 2 values.
 
 def climb_stairs(n):
     pass
 
 
 run_tests(climb_stairs, [
-    ((2,), 2),
-    ((3,), 3),
-    ((1,), 1),
-    ((5,), 8),
-    ((10,), 89),
+    ((1,),    1),     # only one way
+    ((2,),    2),     # 1+1 or 2
+    ((3,),    3),     # 1+1+1, 1+2, 2+1
+    ((4,),    5),
+    ((5,),    8),
+    ((10,),  89),
+    ((20,), 10946),   # larger input
+    ((0,),    1),     # already at top (edge case)
 ])

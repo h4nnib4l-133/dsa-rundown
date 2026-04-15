@@ -2,10 +2,20 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Clone Graph (LC #133) -- Medium
 # Deep copy a connected undirected graph.
+# Each node has val and list of neighbors.
+# Must create new node objects (not reuse originals).
 #
-#   Key: BFS/DFS with hashmap {original -> clone}
+# Example:
+#   Node 1 -- Node 2
+#   |          |
+#   Node 4 -- Node 3
+#   -> New graph with same structure but all different objects.
+#
+#   Key: BFS/DFS with hashmap {original_node: clone_node}.
+#        Visit each node, create clone, link neighbors via the map.
 
 class GraphNode:
     def __init__(self, val=0, neighbors=None):
@@ -46,6 +56,7 @@ def solve(adj_list):
 
 
 run_tests(solve, [
-    (([[2,4],[1,3],[2,4],[1,3]],), True),
-    (([[],],),                     True),
+    (([[2,4],[1,3],[2,4],[1,3]],), True),   # 4-node square
+    (([[],],),                     True),   # single node, no neighbors
+    (([[2],[1,3],[2]],),           True),   # 3-node chain
 ])

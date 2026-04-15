@@ -1,5 +1,26 @@
 import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from test_runner import run_tests
+
+# Binary Tree Maximum Path Sum (LC #124) -- Hard
+# Find the maximum SUM of any path in the tree.
+# Path = sequence of nodes where each pair of adjacent nodes has an edge.
+# Path does NOT need to pass through root. Can start/end at any node.
+#
+# Example:
+#     1
+#    / \
+#   2   3    -> 6  (path: 2->1->3)
+#
+#     -10
+#    /   \
+#   9    20   -> 42  (path: 15->20->7)
+#       /  \
+#      15   7
+#
+#   Key: DFS returns max single-direction path through node.
+#        At each node, update global max with left+node+right.
+#        Return node.val + max(left, right, 0) to parent.
+
 from collections import deque
 
 
@@ -45,7 +66,9 @@ def solve(arr):
 
 
 run_tests(solve, [
-    (([1,2,3],),           6),
-    (([-10,9,20,None,None,15,7],), 42),
-    (([-3],),             -3),
+    (([1,2,3],),                       6),     # 2+1+3
+    (([-10,9,20,None,None,15,7],),    42),     # 15+20+7
+    (([-3],),                         -3),     # single negative node
+    (([1,-2,-3,1,3,-2,None,-1],),      3),     # just the node 3
+    (([2,-1],),                        2),     # skip negative child
 ])

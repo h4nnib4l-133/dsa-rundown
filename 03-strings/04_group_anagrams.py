@@ -2,10 +2,17 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Group Anagrams (LC #49) -- Medium
-# Group strings that are anagrams of each other.
+# Given array of strings, group anagrams together.
 #
-#   Key: Sort each string as key, or use frequency tuple as key
+# Example:
+#   ["eat","tea","tan","ate","nat","bat"]
+#   -> [["eat","tea","ate"], ["tan","nat"], ["bat"]]
+#   (order within groups and order of groups doesn't matter)
+#
+#   Key: Sort each string as key -> group by key.
+#        Or use frequency tuple as key (faster than sorting).
 
 def group_anagrams(strs):
     """Return list of groups (order doesn't matter)"""
@@ -23,4 +30,7 @@ run_tests(solve, [
      [["ate","eat","tea"], ["bat"], ["nat","tan"]]),
     (([""],),  [[""]]),
     ((["a"],), [["a"]]),
+    ((["abc","bca","cab","xyz","zyx"],),
+     [["abc","bca","cab"], ["xyz","zyx"]]),
+    ((["",""],), [["",""]]),     # two empty strings are anagrams
 ])

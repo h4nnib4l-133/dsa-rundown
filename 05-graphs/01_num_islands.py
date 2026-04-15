@@ -20,10 +20,20 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Number of Islands (LC #200) -- Medium
-# Count islands in a 2D binary grid.
+# Given 2D grid of '1' (land) and '0' (water), count number of islands.
+# An island is surrounded by water and formed by connecting adjacent lands
+# (horizontal/vertical, NOT diagonal).
 #
-#   Key: DFS/BFS flood fill. Mark visited cells. Count connected components of '1's.
+# Example:
+#   [["1","1","0","0","0"],
+#    ["1","1","0","0","0"],      -> 3 islands
+#    ["0","0","1","0","0"],
+#    ["0","0","0","1","1"]]
+#
+#   Key: DFS/BFS flood fill. For each unvisited '1', start DFS to mark
+#        all connected land as visited. Count how many times you start DFS.
 
 def num_islands(grid):
     pass
@@ -33,9 +43,15 @@ run_tests(num_islands, [
     (([["1","1","1","1","0"],
        ["1","1","0","1","0"],
        ["1","1","0","0","0"],
-       ["0","0","0","0","0"]],), 1),
+       ["0","0","0","0","0"]],), 1),     # one big island
     (([["1","1","0","0","0"],
        ["1","1","0","0","0"],
        ["0","0","1","0","0"],
-       ["0","0","0","1","1"]],), 3),
+       ["0","0","0","1","1"]],), 3),     # three islands
+    (([["0","0","0"],
+       ["0","0","0"]],),         0),     # no land
+    (([["1"]],),                 1),     # single cell island
+    (([["0"]],),                 0),     # single cell water
+    (([["1","0","1","0","1"]],), 3),     # single row, 3 islands
+    (([["1"],["0"],["1"]],),     2),     # single column, 2 islands
 ])

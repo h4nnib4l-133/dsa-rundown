@@ -2,20 +2,31 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Unique Paths (LC #62) -- Medium
-# Count paths from top-left to bottom-right (only right/down moves).
+# Robot at top-left of m x n grid. Can only move right or down.
+# Count distinct paths to bottom-right corner.
 #
-#   State: `dp[i][j]` = paths to reach (i,j)
-#   Transition: `dp[i][j] = dp[i-1][j] + dp[i][j-1]`
+# Example:
+#   m=3, n=7 -> 28
+#   m=3, n=2 -> 3  (RD, DR, RD... paths: DDR, DRD, RDD -> wait m=rows n=cols)
+#        3x2 grid:  paths = RDD, DRD, DDR -> 3
+#
+#   Key: dp[i][j] = dp[i-1][j] + dp[i][j-1].
+#        First row and first col are all 1 (only one way to reach them).
 
 def unique_paths(m, n):
     pass
 
 
 run_tests(unique_paths, [
-    ((3, 7), 28),
-    ((3, 2), 3),
-    ((1, 1), 1),
-    ((7, 3), 28),
-    ((3, 3), 6),
+    ((3, 7),  28),
+    ((3, 2),   3),
+    ((1, 1),   1),     # already there
+    ((7, 3),  28),     # same as (3,7)
+    ((3, 3),   6),
+    ((1, 5),   1),     # single row
+    ((5, 1),   1),     # single column
+    ((2, 2),   2),     # RD or DR
+    ((10, 10), 48620), # larger grid
 ])

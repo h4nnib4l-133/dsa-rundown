@@ -15,6 +15,19 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
+# Reverse Linked List (LC #206) -- Easy
+# Reverse a singly linked list and return new head.
+#
+# Example:
+#   1 -> 2 -> 3 -> 4 -> 5  becomes  5 -> 4 -> 3 -> 2 -> 1
+#   1 -> 2                  becomes  2 -> 1
+#   (empty)                 becomes  (empty)
+#
+#   Key (iterative): Three pointers: prev=None, curr=head, next=curr.next.
+#        Each step: curr.next = prev, prev = curr, curr = next.
+#   Key (recursive): reverse rest, then set head.next.next = head, head.next = None.
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val
@@ -53,8 +66,10 @@ def solve(arr):
 
 
 run_tests(solve, [
-    (([1,2,3,4,5],),  [5,4,3,2,1]),
-    (([1,2],),        [2,1]),
-    (([1],),          [1]),
-    (([],),           []),
+    (([1,2,3,4,5],),   [5,4,3,2,1]),
+    (([1,2],),         [2,1]),
+    (([1],),           [1]),       # single node
+    (([],),            []),        # empty list
+    (([1,2,3],),       [3,2,1]),
+    (([7,7,7],),       [7,7,7]),   # all same values
 ])

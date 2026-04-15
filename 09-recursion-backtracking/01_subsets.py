@@ -31,10 +31,16 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Subsets (LC #78) -- Medium
-# Generate all subsets of distinct integers.
+# Given array of DISTINCT integers, return all possible subsets (power set).
 #
-#   Key: For each element, include it or don't. Or iterative: start empty, for each num, add it to all existing subsets.
+# Example:
+#   [1,2,3] -> [[], [1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]
+#   [0]     -> [[], [0]]
+#
+#   Key: Backtrack -- for each element, include or exclude.
+#        Or iterative: start with [[]], for each num, add it to all existing subsets.
 
 def subsets(nums):
     pass
@@ -47,4 +53,6 @@ def solve(nums):
 run_tests(solve, [
     (([1,2,3],), [[],[1],[1,2],[1,2,3],[1,3],[2],[2,3],[3]]),
     (([0],),     [[],[0]]),
+    (([1,2],),   [[],[1],[1,2],[2]]),
+    (([],),      [[]]),     # empty input -> just empty set
 ])

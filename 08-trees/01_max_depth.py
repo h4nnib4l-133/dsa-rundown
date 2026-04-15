@@ -22,6 +22,23 @@
 
 import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from test_runner import run_tests
+
+# Maximum Depth of Binary Tree (LC #104) -- Easy
+# Find the maximum depth (height) of a binary tree.
+# Depth = number of nodes along longest path from root to leaf.
+#
+# Example:
+#       3
+#      / \
+#     9  20         -> depth = 3  (3->20->7)
+#       /  \
+#      15   7
+#
+#   Single node -> 1. Empty tree -> 0.
+#
+#   Key: return max(depth(left), depth(right)) + 1.
+#        Base case: None -> 0.
+
 from collections import deque
 
 
@@ -66,7 +83,10 @@ def solve(arr):
 
 
 run_tests(solve, [
-    (([3,9,20,None,None,15,7],), 3),
-    (([1,None,2],),               2),
-    (([],),                       0),
+    (([3,9,20,None,None,15,7],),  3),
+    (([1,None,2],),                2),
+    (([],),                        0),     # empty tree
+    (([1],),                       1),     # single node
+    (([1,2,3,4,5],),               3),     # left-leaning
+    (([1,None,2,None,3],),         3),     # right chain
 ])

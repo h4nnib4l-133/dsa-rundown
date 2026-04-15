@@ -16,20 +16,35 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Valid Parentheses (LC #20) -- Easy
-# Check if string of `()[]{}` is balanced.
+# Given string of '(', ')', '{', '}', '[', ']', check if it's balanced.
+# Every open bracket must be closed by same type in correct order.
 #
-#   Key: Push opening brackets, pop and compare for closing brackets
+# Example:
+#   "()"       -> True
+#   "()[]{}"   -> True
+#   "(]"       -> False
+#   "([)]"     -> False  (interleaved, not nested)
+#   "{[]}"     -> True   (nested)
+#
+#   Key: Stack. Push opening brackets.
+#        On closing bracket, pop and check if it matches.
 
 def is_valid(s):
     pass
 
 
 run_tests(is_valid, [
-    (("()",),     True),
-    (("()[]{}",), True),
-    (("(]",),     False),
-    (("([)]",),   False),
-    (("{[]}",),   True),
-    (("",),       True),
+    (("()",),       True),
+    (("()[]{}",),   True),
+    (("(]",),       False),
+    (("([)]",),     False),     # interleaved
+    (("{[]}",),     True),      # nested
+    (("",),         True),      # empty string
+    (("(",),        False),     # unclosed
+    ((")",),        False),     # no opener
+    (("(((())))",), True),      # deeply nested
+    (("{{{}}}[]",), True),      # mixed nested
+    (("[",),        False),     # single open bracket
 ])

@@ -2,10 +2,18 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Merge Two Sorted Lists (LC #21) -- Easy
-# Merge two sorted lists into one sorted list.
+# Merge two sorted linked lists into one sorted list.
+# Made by splicing together the nodes of the first two lists.
 #
-#   Key: Dummy head + compare and link smaller node
+# Example:
+#   1->2->4  +  1->3->4  ->  1->1->2->3->4->4
+#   (empty)  +  0         ->  0
+#
+#   Key: Dummy head node. Compare both heads, link smaller one.
+#        Advance the pointer of the list you took from.
+#        Attach remaining list when one is exhausted.
 
 class ListNode:
     def __init__(self, val=0, nxt=None):
@@ -39,8 +47,11 @@ def solve(a1, a2):
 
 
 run_tests(solve, [
-    (([1,2,4], [1,3,4]),  [1,1,2,3,4,4]),
-    (([], []),             []),
-    (([], [0]),            [0]),
-    (([1], [2]),           [1,2]),
+    (([1,2,4], [1,3,4]),     [1,1,2,3,4,4]),
+    (([], []),                []),              # both empty
+    (([], [0]),               [0]),             # one empty
+    (([0], []),               [0]),             # other empty
+    (([1], [2]),              [1,2]),
+    (([5,10,15], [2,8,20]),   [2,5,8,10,15,20]),  # interleaved
+    (([1,1,1], [1,1,1]),      [1,1,1,1,1,1]),     # all same
 ])

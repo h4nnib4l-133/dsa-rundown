@@ -2,10 +2,18 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Reorder List (LC #143) -- Medium
-# Reorder: L0 -> Ln -> L1 -> Ln-1 -> ...
+# Reorder in-place: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 -> ...
 #
-#   Key: Find middle, reverse second half, merge alternating
+# Example:
+#   1->2->3->4       -> 1->4->2->3
+#   1->2->3->4->5    -> 1->5->2->4->3
+#
+#   Key: Three steps:
+#     1. Find middle (slow/fast)
+#     2. Reverse second half
+#     3. Merge first half and reversed second half alternating
 
 class ListNode:
     def __init__(self, val=0, nxt=None):
@@ -42,8 +50,10 @@ def solve(arr):
 
 
 run_tests(solve, [
-    (([1,2,3,4],),   [1,4,2,3]),
-    (([1,2,3,4,5],), [1,5,2,4,3]),
-    (([1],),         [1]),
-    (([1,2],),       [1,2]),
+    (([1,2,3,4],),     [1,4,2,3]),
+    (([1,2,3,4,5],),   [1,5,2,4,3]),
+    (([1],),           [1]),             # single node
+    (([1,2],),         [1,2]),           # two nodes
+    (([1,2,3],),       [1,3,2]),         # three nodes
+    (([1,2,3,4,5,6],), [1,6,2,5,3,4]),  # six nodes
 ])

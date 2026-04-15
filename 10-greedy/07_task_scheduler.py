@@ -2,17 +2,30 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Task Scheduler (LC #621) -- Medium
-# Min intervals to execute all tasks with cooldown n between same tasks.
+# Given tasks (chars) and cooldown n, find minimum time intervals.
+# Same task must have at least n intervals between executions.
+# Can insert idle slots if needed.
 #
-#   Key: Most frequent task determines frame. Answer = `max(len(tasks), (max_freq - 1) * (n + 1) + count_of_max_freq)`
+# Example:
+#   tasks=["A","A","A","B","B","B"], n=2
+#   -> 8: A B _ A B _ A B  (3 A's need gaps of 2)
+#
+#   tasks=same, n=0 -> 6  (no cooldown, just run all)
+#
+#   Key: Most frequent task determines frame.
+#        Result = max(len(tasks), (max_freq-1) * (n+1) + count_of_max_freq_tasks)
 
 def least_interval(tasks, n):
     pass
 
 
 run_tests(least_interval, [
-    ((["A","A","A","B","B","B"], 2), 8),
-    ((["A","A","A","B","B","B"], 0), 6),
+    ((["A","A","A","B","B","B"], 2),  8),
+    ((["A","A","A","B","B","B"], 0),  6),
     ((["A","A","A","A","A","A","B","C","D","E","F","G"], 2), 16),
+    ((["A"], 2),                       1),     # single task
+    ((["A","B","C","D","E","F"], 2),   6),     # all different, no idle
+    ((["A","A","B","B"], 1),           4),     # ABAB, no idle needed
 ])

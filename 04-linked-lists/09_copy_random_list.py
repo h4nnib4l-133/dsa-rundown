@@ -2,10 +2,20 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Copy List with Random Pointer (LC #138) -- Medium
-# Deep copy list where each node has a next and random pointer.
+# Deep copy a linked list where each node has next AND random pointer.
+# Random can point to any node in the list or None.
 #
-#   Key: HashMap {old -> new} in first pass, link in second pass. Or interleaving trick.
+# Example:
+#   Node(7,null) -> Node(13,0) -> Node(11,4) -> ...
+#   (random pointers shown as indices)
+#   Must create entirely new nodes, not reuse originals.
+#
+#   Key: HashMap approach: {original_node: copy_node}.
+#        Pass 1: create all copy nodes.
+#        Pass 2: link next and random pointers.
+#        Alt: Interleaving trick (no extra space).
 
 class Node:
     def __init__(self, val=0, nxt=None, random=None):
@@ -45,5 +55,6 @@ def solve(vals, random_indices):
 run_tests(solve, [
     (([7,13,11,10,1], [None,0,4,2,0]),  True),
     (([1,2], [1,1]),                     True),
-    (([],    []),                         True),
+    (([],    []),                         True),     # empty list
+    (([3,3,3], [None,0,None]),           True),      # some randoms None
 ])

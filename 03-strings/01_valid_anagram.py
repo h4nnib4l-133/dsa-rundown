@@ -15,10 +15,17 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Valid Anagram (LC #242) -- Easy
-# Check if two strings are anagrams.
+# Given two strings s and t, return True if t is an anagram of s.
+# Anagram = same characters, same frequency, different order.
 #
-#   Key: Frequency count array[26]. Both must match.
+# Example:
+#   "anagram", "nagaram" -> True  (both have a:3, n:1, g:1, r:1, m:1)
+#   "rat", "car"         -> False (different chars)
+#
+#   Key: Count character frequencies. Both must match.
+#        Use array[26] or Counter/dict.
 
 def is_anagram(s, t):
     pass
@@ -28,6 +35,9 @@ run_tests(is_anagram, [
     (("anagram", "nagaram"), True),
     (("rat", "car"),         False),
     (("a", "a"),             True),
-    (("ab", "a"),            False),
-    (("", ""),               True),
+    (("ab", "a"),            False),    # different lengths
+    (("", ""),               True),     # both empty
+    (("ab", "ba"),           True),     # simple swap
+    (("aacc", "ccac"),       False),    # same chars, different freq
+    (("listen", "silent"),   True),     # classic anagram
 ])

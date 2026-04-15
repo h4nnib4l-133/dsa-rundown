@@ -1,5 +1,24 @@
 import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from test_runner import run_tests
+
+# Validate Binary Search Tree (LC #98) -- Medium
+# Check if binary tree is a valid BST.
+# BST rule: left subtree values < node < right subtree values (all nodes, not just children).
+#
+# Example:
+#     2
+#    / \
+#   1   3    -> True
+#
+#     5
+#    / \
+#   1   4    -> False (4 < 5 but 4 is right child)
+#      / \
+#     3   6
+#
+#   Key: Pass valid range (min, max) to each node.
+#        Or: inorder traversal must be strictly increasing.
+
 from collections import deque
 
 
@@ -44,7 +63,11 @@ def solve(arr):
 
 
 run_tests(solve, [
-    (([2,1,3],), True),
-    (([5,1,4,None,None,3,6],), False),
-    (([1],), True),
+    (([2,1,3],),                     True),
+    (([5,1,4,None,None,3,6],),       False),    # 4 < 5 in right subtree
+    (([1],),                         True),     # single node
+    (([],),                          True),     # empty tree (vacuously valid)
+    (([5,4,6,None,None,3,7],),       False),    # 3 in right subtree but 3 < 5
+    (([2,2,2],),                     False),    # equal values not valid BST
+    (([10,5,15,None,None,6,20],),    False),    # 6 < 10 but in right subtree
 ])

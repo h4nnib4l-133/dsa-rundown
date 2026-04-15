@@ -2,10 +2,17 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
-# Middle of Linked List (LC #876) -- Easy
-# Return middle node. If two middle nodes, return second.
+
+# Middle of the Linked List (LC #876) -- Easy
+# Return the middle node. If two middle nodes, return the second one.
 #
-#   Key: Slow moves 1 step, fast moves 2. When fast reaches end, slow is at middle.
+# Example:
+#   1->2->3->4->5       -> node 3  (middle of 5)
+#   1->2->3->4->5->6    -> node 4  (second of two middles)
+#   1                    -> node 1
+#
+#   Key: Slow/fast pointers. Slow moves 1 step, fast moves 2.
+#        When fast reaches end, slow is at middle.
 
 class ListNode:
     def __init__(self, val=0, nxt=None):
@@ -40,7 +47,9 @@ def solve(arr):
 
 
 run_tests(solve, [
-    (([1,2,3,4,5],),   [3,4,5]),
-    (([1,2,3,4,5,6],), [4,5,6]),
-    (([1],),            [1]),
+    (([1,2,3,4,5],),     [3,4,5]),     # odd, return middle onward
+    (([1,2,3,4,5,6],),   [4,5,6]),     # even, return second middle onward
+    (([1],),              [1]),         # single node
+    (([1,2],),            [2]),         # two nodes, return second
+    (([1,2,3],),          [2,3]),       # three nodes
 ])

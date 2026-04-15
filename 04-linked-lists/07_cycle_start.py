@@ -2,10 +2,20 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Linked List Cycle II (LC #142) -- Medium
-# Find the node where cycle begins.
+# If linked list has a cycle, return the NODE where cycle begins.
+# Return None if no cycle.
 #
-#   Key: Floyd's phase 2 -- after detection, move one pointer to head, advance both by 1 until they meet.
+# Example:
+#   3 -> 2 -> 0 -> -4 -> (back to 2)  -> return node with val=2
+#   1 -> 2 -> (back to 1)              -> return node with val=1
+#   1 -> None                          -> return None
+#
+#   Key: Floyd's algorithm, phase 2.
+#        1. Detect cycle with slow/fast.
+#        2. Move one pointer to head, keep other at meeting point.
+#        3. Both advance 1 step. They meet at cycle start.
 
 class ListNode:
     def __init__(self, val=0, nxt=None):
@@ -51,7 +61,9 @@ def solve(arr, pos):
 
 
 run_tests(solve, [
-    (([3,2,0,-4], 1),  2),
-    (([1,2], 0),       1),
-    (([1], -1),       -1),
+    (([3,2,0,-4], 1),   2),     # cycle starts at node val=2
+    (([1,2], 0),        1),     # cycle starts at head
+    (([1], -1),        -1),     # no cycle
+    (([1,2,3,4,5], 2),  3),     # cycle starts at node val=3
+    (([1], 0),          1),     # self-loop
 ])

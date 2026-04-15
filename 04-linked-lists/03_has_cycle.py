@@ -2,10 +2,19 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+
 # Linked List Cycle (LC #141) -- Easy
-# Detect if linked list has a cycle.
+# Given head of linked list, return True if there is a cycle.
+# A cycle exists if some node's next points to a previous node.
 #
-#   Key: Floyd's tortoise and hare. If they meet, cycle exists.
+# Example:
+#   3 -> 2 -> 0 -> -4 -> (back to 2)  -> True
+#   1 -> 2 -> (back to 1)              -> True
+#   1 -> None                          -> False
+#
+#   Key: Floyd's tortoise and hare.
+#        Slow moves 1 step, fast moves 2.
+#        If they meet, cycle exists. If fast hits None, no cycle.
 
 class ListNode:
     def __init__(self, val=0, nxt=None):
@@ -49,8 +58,10 @@ def solve_cycle(arr, pos):
 
 
 run_tests(solve_cycle, [
-    (([3,2,0,-4], 1),  True),
-    (([1,2], 0),       True),
-    (([1], -1),        False),
-    (([1,2,3], -1),    False),
+    (([3,2,0,-4], 1),    True),     # cycle at node index 1
+    (([1,2], 0),         True),     # cycle at head
+    (([1], -1),          False),    # no cycle, single node
+    (([1,2,3], -1),      False),    # no cycle, 3 nodes
+    (([1,2,3,4,5], 2),   True),     # cycle at middle
+    (([1], 0),           True),     # self-loop
 ])
