@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Remove Nth Node From End (LC #19) -- Medium
+# Remove nth node from end in one pass.
+#
+#   Key: Two pointers with gap of n. When fast reaches end, slow is at target.
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

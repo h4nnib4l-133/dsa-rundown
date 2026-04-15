@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Product of Array Except Self (LC #238) -- Medium
+# Compute product of all elements except self, without division.
+#
+#   Key: Two passes: prefix products left-to-right, then suffix right-to-left
+
 def product_except_self(nums):
     pass
 

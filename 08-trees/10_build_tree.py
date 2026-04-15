@@ -3,6 +3,12 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Construct Tree from Preorder and Inorder (LC #105) -- Medium
+# Build tree from preorder and inorder traversal arrays.
+#
+#   Key: First element of preorder = root. Find root in inorder to split left/right subtrees.
+#   Optimization: Use hashmap for O(1) index lookup in inorder
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

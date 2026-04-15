@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Invert Binary Tree (LC #226) -- Easy
+# Mirror a binary tree.
+#
+#   Key: Swap left and right children recursively
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

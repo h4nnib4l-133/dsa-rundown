@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Linked List Cycle II (LC #142) -- Medium
+# Find the node where cycle begins.
+#
+#   Key: Floyd's phase 2 -- after detection, move one pointer to head, advance both by 1 until they meet.
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

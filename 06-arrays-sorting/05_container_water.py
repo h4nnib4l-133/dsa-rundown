@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Container With Most Water (LC #11) -- Medium
+# Find two lines forming container with most water.
+#
+#   Key: Two pointers from both ends. Move the shorter line inward.
+
 def max_area(height):
     pass
 

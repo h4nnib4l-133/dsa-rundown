@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Copy List with Random Pointer (LC #138) -- Medium
+# Deep copy list where each node has a next and random pointer.
+#
+#   Key: HashMap {old -> new} in first pass, link in second pass. Or interleaving trick.
+
 class Node:
     def __init__(self, val=0, nxt=None, random=None):
         self.val = val

@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Binary Tree Level Order Traversal (LC #102) -- Medium
+# Return nodes grouped by level.
+#
+#   Key: BFS with queue. Process all nodes at current level before moving to next.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

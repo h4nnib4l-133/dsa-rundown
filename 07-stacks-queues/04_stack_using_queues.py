@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Implement Stack using Queues (LC #225) -- Easy
+# LIFO stack using queues.
+#
+#   Key: On push, enqueue to q2, then transfer q1 -> q2, swap q1 and q2
+
 class MyStack:
     def __init__(self):
         pass

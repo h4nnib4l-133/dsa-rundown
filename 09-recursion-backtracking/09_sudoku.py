@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Sudoku Solver (LC #37) -- Hard
+# Fill valid Sudoku board.
+#
+#   Key: Find empty cell, try 1-9, validate row/col/box, backtrack if stuck.
+
 def solve_sudoku(board):
     """Modify board in-place"""
     pass

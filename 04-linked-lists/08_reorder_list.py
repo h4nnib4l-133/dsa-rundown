@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Reorder List (LC #143) -- Medium
+# Reorder: L0 -> Ln -> L1 -> Ln-1 -> ...
+#
+#   Key: Find middle, reverse second half, merge alternating
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

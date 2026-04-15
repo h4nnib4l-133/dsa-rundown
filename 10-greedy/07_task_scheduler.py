@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Task Scheduler (LC #621) -- Medium
+# Min intervals to execute all tasks with cooldown n between same tasks.
+#
+#   Key: Most frequent task determines frame. Answer = `max(len(tasks), (max_freq - 1) * (n + 1) + count_of_max_freq)`
+
 def least_interval(tasks, n):
     pass
 

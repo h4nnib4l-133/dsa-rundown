@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# BFS Shortest Reach (HackerRank) -- Medium
+# Find shortest distances from a start node to all others in unweighted graph.
+#
+#   Key: Standard BFS. Distance = level * edge_weight.
+
 def bfs_shortest(n, edges, start):
     """Return list of shortest distances from start to all nodes. -1 if unreachable."""
     pass

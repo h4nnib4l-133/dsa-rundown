@@ -2,6 +2,12 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Search in Rotated Sorted Array (LC #33) -- Medium
+# Search target in a rotated sorted array in O(log n).
+#
+#   Key: Determine which half is sorted, then decide which half to search
+#   Hint: Check if `nums[lo] <= nums[mid]` to identify sorted half
+
 def search_rotated(nums, target):
     pass
 

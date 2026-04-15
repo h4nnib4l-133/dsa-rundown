@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Find Peak Element (LC #162) -- Medium
+# Find element greater than its neighbors. Multiple peaks OK, return any.
+#
+#   Key: If `nums[mid] < nums[mid+1]`, peak is to the right
+
 def find_peak(nums):
     """Return index of any peak element"""
     pass

@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Merge Intervals (LC #56) -- Medium
+# Merge all overlapping intervals.
+#
+#   Key: Sort by start. If current overlaps previous, merge. Else add new interval.
+
 def merge(intervals):
     pass
 

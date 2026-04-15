@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Validate BST (LC #98) -- Medium
+# Is the tree a valid BST?
+#
+#   Key: Each node has a valid range (min, max). Or inorder traversal must be strictly increasing.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

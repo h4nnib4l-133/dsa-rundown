@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Subsets II (LC #90) -- Medium
+# Generate all subsets when array may contain duplicates.
+#
+#   Key: Sort first. Skip duplicate elements at same recursion level: `if i > start and nums[i] == nums[i-1]: continue`
+
 def subsets_with_dup(nums):
     pass
 

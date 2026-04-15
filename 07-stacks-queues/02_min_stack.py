@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Min Stack (LC #155) -- Medium
+# Stack with push, pop, top, getMin all in O(1).
+#
+#   Key: Auxiliary stack tracking minimum at each level
+
 class MinStack:
     def __init__(self):
         pass

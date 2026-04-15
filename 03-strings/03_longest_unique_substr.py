@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Longest Substring Without Repeating Characters (LC #3) -- Medium
+# Find length of longest substring with all unique characters.
+#
+#   Key: Sliding window + hashset. Move left pointer when duplicate found.
+
 def length_of_longest_substring(s):
     pass
 

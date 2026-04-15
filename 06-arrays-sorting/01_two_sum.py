@@ -1,6 +1,23 @@
+# ============================================================
+# PATTERN: ARRAYS SORTING
+# ============================================================
+# 1. **Two pointers** -- sorted arrays, pair/triplet sum, container problems
+# 2. **Prefix sum** -- range sum queries, subarray sum problems
+# 3. **Hash map** -- O(1) lookup for complement, frequency counting
+# 4. **Merge intervals** -- sort by start, merge overlapping
+# 5. **Dutch National Flag** -- 3-way partition with lo/mid/hi pointers
+#
+# ---
+# ============================================================
+
 import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from test_runner import run_tests
 
+
+# Two Sum (LC #1) -- Easy
+# Find two numbers that add up to target. Return indices.
+#
+#   Key: Hash map: for each num, check if `target - num` exists
 
 def two_sum(nums, target):
     """Return indices of two numbers that add up to target"""

@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Add Two Numbers (LC #2) -- Medium
+# Add two numbers represented as reversed linked lists.
+#
+#   Key: Traverse both lists, sum digits + carry, create new nodes
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

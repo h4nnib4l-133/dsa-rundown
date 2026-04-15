@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Middle of Linked List (LC #876) -- Easy
+# Return middle node. If two middle nodes, return second.
+#
+#   Key: Slow moves 1 step, fast moves 2. When fast reaches end, slow is at middle.
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

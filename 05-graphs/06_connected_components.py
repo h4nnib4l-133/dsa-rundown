@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Number of Connected Components (LC #323) -- Medium
+# Count connected components in undirected graph.
+#
+#   Key: DFS/BFS from each unvisited node, or Union-Find
+
 def count_components(n, edges):
     pass
 

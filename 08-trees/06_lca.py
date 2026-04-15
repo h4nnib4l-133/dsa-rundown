@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Lowest Common Ancestor (LC #236) -- Medium
+# Find LCA of two nodes in binary tree.
+#
+#   Key: If current node is p or q, return it. If left and right both return non-null, current is LCA.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

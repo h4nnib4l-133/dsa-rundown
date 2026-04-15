@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Search a 2D Matrix (LC #74) -- Medium
+# Search value in m x n matrix where each row is sorted and first element > last of previous row.
+#
+#   Key: Treat as flattened sorted array: `row = mid // cols`, `col = mid % cols`
+
 def search_matrix(matrix, target):
     """Return True if target is in matrix"""
     pass

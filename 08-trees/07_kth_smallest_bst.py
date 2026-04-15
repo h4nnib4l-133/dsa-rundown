@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Kth Smallest Element in BST (LC #230) -- Medium
+# Find kth smallest value in BST.
+#
+#   Key: Inorder traversal (left -> root -> right), count to k
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

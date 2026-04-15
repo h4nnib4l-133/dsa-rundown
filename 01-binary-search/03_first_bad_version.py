@@ -3,6 +3,11 @@ from test_runner import run_tests
 
 
 # The API isBadVersion is predefined -- we simulate it here
+# First Bad Version (LC #278) -- Easy
+# Given n versions, find the first bad one using `isBadVersion(n)` API.
+#
+#   Key: Binary search on boolean predicate
+
 def make_checker(bad):
     def isBadVersion(v):
         return v >= bad

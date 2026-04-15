@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Permutations (LC #46) -- Medium
+# Generate all permutations of distinct integers.
+#
+#   Key: Backtrack with used[] array. Or swap-based approach.
+
 def permute(nums):
     pass
 

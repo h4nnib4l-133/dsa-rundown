@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Pacific Atlantic Water Flow (LC #417) -- Medium
+# Find cells that can flow to both Pacific and Atlantic oceans.
+#
+#   Key: Reverse thinking -- BFS/DFS from ocean borders inward. Intersect reachable sets.
+
 def pacific_atlantic(heights):
     """Return list of [r,c] that can flow to both oceans"""
     pass

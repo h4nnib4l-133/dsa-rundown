@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Group Anagrams (LC #49) -- Medium
+# Group strings that are anagrams of each other.
+#
+#   Key: Sort each string as key, or use frequency tuple as key
+
 def group_anagrams(strs):
     """Return list of groups (order doesn't matter)"""
     pass

@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Combination Sum (LC #39) -- Medium
+# Find combinations that sum to target. Can reuse elements.
+#
+#   Key: Backtrack with start index. Include current element (don't advance index) or skip (advance).
+
 def combination_sum(candidates, target):
     pass
 

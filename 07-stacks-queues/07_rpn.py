@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Evaluate Reverse Polish Notation (LC #150) -- Medium
+# Evaluate postfix expression.
+#
+#   Key: Push numbers. On operator, pop two, compute, push result.
+
 def eval_rpn(tokens):
     pass
 

@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# First and Last Position (LC #34) -- Medium
+# Find starting and ending index of target in sorted array.
+#
+#   Key: Run two binary searches -- one for left bound, one for right bound
+
 def search_range(nums, target):
     """Return [first, last] index of target, or [-1, -1]"""
     pass

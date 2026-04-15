@@ -3,6 +3,12 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Binary Tree Maximum Path Sum (LC #124) -- Hard
+# Maximum path sum (path can start/end at any node).
+#
+#   Key: DFS returns max single-path through node. Update global max with `left + node + right`.
+#   Hint: Return `node.val + max(left, right, 0)` to parent. Negative paths = return 0.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

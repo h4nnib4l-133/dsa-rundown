@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Subarray Sum Equals K (LC #560) -- Medium
+# Count subarrays with sum equal to k.
+#
+#   Key: Prefix sum + hash map. Count how many times `prefix_sum - k` has occurred.
+
 def subarray_sum(nums, k):
     pass
 

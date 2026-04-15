@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Implement Queue using Stacks (LC #232) -- Easy
+# FIFO queue using two LIFO stacks.
+#
+#   Key: Push to stack1. For pop, transfer stack1 -> stack2 if stack2 empty.
+
 class MyQueue:
     def __init__(self):
         pass

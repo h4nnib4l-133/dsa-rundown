@@ -1,6 +1,40 @@
+# ============================================================
+# PATTERN: RECURSION BACKTRACKING
+# ============================================================
+# Backtracking = DFS through decision tree. At each step: **choose, explore, unchoose**.
+#
+# **Template:**
+# ```python
+# def backtrack(state, choices):
+#     if is_complete(state):
+#         result.append(state.copy())
+#         return
+#     for choice in choices:
+#         if is_valid(choice):
+#             state.add(choice)        # choose
+#             backtrack(state, ...)     # explore
+#             state.remove(choice)     # unchoose
+# ```
+#
+# **Key decisions:**
+# - **Subsets:** include or exclude each element (order doesn't matter)
+# - **Permutations:** try each unused element at current position (order matters)
+# - **Combinations:** like subsets but with target constraint
+# - **Constraint satisfaction:** N-Queens, Sudoku -- check validity before placing
+#
+# **Pruning:** Skip invalid choices early to avoid unnecessary recursion.
+#
+# ---
+# ============================================================
+
 import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from test_runner import run_tests
 
+
+# Subsets (LC #78) -- Medium
+# Generate all subsets of distinct integers.
+#
+#   Key: For each element, include it or don't. Or iterative: start empty, for each num, add it to all existing subsets.
 
 def subsets(nums):
     pass

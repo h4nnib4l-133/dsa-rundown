@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Is Graph Bipartite? (LC #785) -- Medium
+# Can graph be 2-colored?
+#
+#   Key: BFS/DFS coloring. If neighbor has same color, not bipartite.
+
 def is_bipartite(graph):
     """graph[i] = list of neighbors of node i"""
     pass

@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Koko Eating Bananas (LC #875) -- Medium
+# Koko eats bananas at speed k. Find minimum k to finish all piles in h hours.
+#
+#   Key: Binary search on answer. For each k, check if `sum(ceil(pile/k)) <= h`
+
 def min_eating_speed(piles, h):
     pass
 

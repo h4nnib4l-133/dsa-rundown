@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Sliding Window Maximum (LC #239) -- Hard
+# Max element in each sliding window of size k.
+#
+#   Key: Monotonic decreasing deque. Front = current max. Remove from back if smaller.
+
 def max_sliding_window(nums, k):
     pass
 

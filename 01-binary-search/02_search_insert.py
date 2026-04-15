@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Search Insert Position (LC #35) -- Easy
+# Find index where target would be inserted in sorted array.
+#
+#   Key: Lower bound -- first index where `arr[i] >= target`
+
 def search_insert(nums, target):
     pass
 

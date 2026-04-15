@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Linked List Cycle (LC #141) -- Easy
+# Detect if linked list has a cycle.
+#
+#   Key: Floyd's tortoise and hare. If they meet, cycle exists.
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

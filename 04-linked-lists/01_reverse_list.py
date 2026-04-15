@@ -1,3 +1,16 @@
+# ============================================================
+# PATTERN: LINKED LISTS
+# ============================================================
+# 1. **Two pointers (slow/fast)** -- cycle detection, find middle, nth from end
+# 2. **Dummy head** -- simplifies edge cases when head might change
+# 3. **Reverse** -- iterative (prev/curr/next) or recursive
+# 4. **Merge** -- two-pointer merge like merge sort
+#
+# **C tips:** Use `struct ListNode { int val; struct ListNode* next; };`. Always `malloc` new nodes, `free` deleted nodes. Watch for dangling pointers.
+#
+# ---
+# ============================================================
+
 import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from test_runner import run_tests
 
@@ -25,13 +38,14 @@ def to_array(head):
     return arr
 
 
-# ---- WRITE YOUR SOLUTION HERE ----
+# Reverse Linked List (LC #206) -- Easy
+# Reverse a singly linked list.
+#
+#   Key: Three pointers: prev, curr, next. Or recursive.
 
 def reverse_list(head):
     """head is a ListNode. Return new head."""
     pass
-
-# ---- END SOLUTION ----
 
 
 def solve(arr):

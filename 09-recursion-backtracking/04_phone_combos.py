@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Letter Combinations of Phone Number (LC #17) -- Medium
+# Map digits to letters, generate all combinations.
+#
+#   Key: Backtrack through digits. For each digit, try all mapped letters.
+
 def letter_combinations(digits):
     pass
 

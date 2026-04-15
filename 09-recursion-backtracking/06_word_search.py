@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Word Search (LC #79) -- Medium
+# Find if word exists in 2D grid following adjacent cells.
+#
+#   Key: DFS from each cell. Mark visited (set to '#'), restore after backtrack.
+
 def exist(board, word):
     pass
 

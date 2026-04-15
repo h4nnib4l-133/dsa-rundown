@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Longest Palindromic Substring (LC #5) -- Medium
+# Find the longest palindromic substring.
+#
+#   Key: Expand around each center (handle odd and even length)
+
 def longest_palindrome(s):
     pass
 

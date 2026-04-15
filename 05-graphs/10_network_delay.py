@@ -3,6 +3,11 @@ from test_runner import run_tests
 import heapq
 
 
+# Network Delay Time (LC #743) -- Medium
+# Min time for signal to reach all nodes from source.
+#
+#   Key: Dijkstra's algorithm. Answer = max of all shortest distances.
+
 def network_delay_time(times, n, k):
     """times[i] = [u, v, w]. Return min time to reach all nodes from k, or -1."""
     pass

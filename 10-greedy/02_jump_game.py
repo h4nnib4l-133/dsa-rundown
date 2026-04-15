@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Jump Game (LC #55) -- Medium
+# Can you reach the last index?
+#
+#   Key: Track farthest reachable index. At each position, update `farthest = max(farthest, i + nums[i])`.
+
 def can_jump(nums):
     pass
 

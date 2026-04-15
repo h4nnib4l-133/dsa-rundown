@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Sort Colors / Dutch National Flag (LC #75) -- Medium
+# Sort array of 0s, 1s, 2s in-place, one pass.
+#
+#   Key: Three pointers: lo (0s boundary), mid (current), hi (2s boundary)
+
 def sort_colors(nums):
     """Sort in-place. Return nums for testing."""
     pass

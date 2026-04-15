@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Remove Duplicates from Sorted Array (LC #26) -- Easy
+# Remove duplicates in-place, return new length.
+#
+#   Key: Two pointers: read and write. Write only when value changes.
+
 def remove_duplicates(nums):
     """Return new length. Modify nums in-place."""
     pass

@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Serialize and Deserialize Binary Tree (LC #297) -- Hard
+# Convert tree to string and back.
+#
+#   Key: Preorder with null markers. Serialize: `"1,2,#,#,3,4,#,#,5,#,#"`. Deserialize with queue/index.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Capacity to Ship Packages (LC #1011) -- Medium
+# Find minimum ship capacity to ship all packages within d days.
+#
+#   Key: BS on answer. lo = max(weights), hi = sum(weights). Greedy check per capacity.
+
 def ship_within_days(weights, days):
     pass
 

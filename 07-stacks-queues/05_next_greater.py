@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Next Greater Element I (LC #496) -- Easy
+# For each element in nums1, find next greater element in nums2.
+#
+#   Key: Monotonic decreasing stack. Process nums2, map each element to its next greater.
+
 def next_greater_element(nums1, nums2):
     pass
 

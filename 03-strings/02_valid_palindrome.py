@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Valid Palindrome (LC #125) -- Easy
+# Check palindrome considering only alphanumeric chars, case-insensitive.
+#
+#   Key: Two pointers from both ends, skip non-alphanumeric
+
 def is_palindrome(s):
     """Consider only alphanumeric, case insensitive"""
     pass

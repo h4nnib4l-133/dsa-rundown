@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Daily Temperatures (LC #739) -- Medium
+# Days until warmer temperature for each day.
+#
+#   Key: Monotonic decreasing stack of indices. Pop when current temp > stack top.
+
 def daily_temperatures(temperatures):
     pass
 

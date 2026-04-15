@@ -2,6 +2,13 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# 0/1 Knapsack -- Medium
+# Max value with weight constraint, each item used at most once.
+#
+#   State: `dp[i][w]` = max value using items 0..i with capacity w
+#   Transition: `dp[i][w] = max(dp[i-1][w], dp[i-1][w-wt[i]] + val[i])`
+#   Optimize: 1D array, iterate w backwards
+
 def knapsack(weights, values, capacity):
     """0/1 knapsack: max value within capacity"""
     pass

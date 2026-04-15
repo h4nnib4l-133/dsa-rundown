@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Merge Two Sorted Lists (LC #21) -- Easy
+# Merge two sorted lists into one sorted list.
+#
+#   Key: Dummy head + compare and link smaller node
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val

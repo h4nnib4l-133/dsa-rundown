@@ -2,6 +2,12 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Trapping Rain Water (LC #42) -- Hard
+# How much water trapped between bars?
+#
+#   Key: Two pointers from ends. Water at position = `min(left_max, right_max) - height`
+#   Alt: Stack-based approach
+
 def trap(height):
     pass
 

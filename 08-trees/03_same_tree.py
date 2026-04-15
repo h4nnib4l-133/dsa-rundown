@@ -3,6 +3,11 @@ from test_runner import run_tests
 from collections import deque
 
 
+# Same Tree (LC #100) -- Easy
+# Check if two trees are identical.
+#
+#   Key: Both null = true. One null = false. Same val + recurse both children.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

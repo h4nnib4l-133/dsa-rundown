@@ -2,6 +2,11 @@ import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__f
 from test_runner import run_tests
 
 
+# Merge K Sorted Lists (LC #23) -- Hard
+# Merge k sorted linked lists.
+#
+#   Key: Min-heap of size k, always pop smallest and push its next. Or divide-and-conquer merge.
+
 class ListNode:
     def __init__(self, val=0, nxt=None):
         self.val = val
