@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Group Anagrams (LC #49) -- Medium
+# Input:  strs: List[str] (lowercase English letters)
+# Output: List[List[str]] (groups of anagrams, any order)
 # Given array of strings, group anagrams together.
 #
 # Example:

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # 3Sum (LC #15) -- Medium
+# Input:  nums: List[int] (unsorted, may have duplicates)
+# Output: List[List[int]] (all unique triplets summing to 0)
 # Find all unique triplets [a,b,c] where a+b+c = 0.
 # No duplicate triplets in result.
 #

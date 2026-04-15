@@ -23,6 +23,8 @@ from collections import deque
 
 
 # Validate BST (LC #98) -- Medium
+# Input:  root: TreeNode
+# Output: bool (True if valid BST: left < node < right for ALL descendants)
 # Is the tree a valid BST?
 #
 #   Key: Each node has a valid range (min, max). Or inorder traversal must be strictly increasing.

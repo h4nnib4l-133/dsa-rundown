@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # String to Integer - atoi (LC #8) -- Medium
+# Input:  s: str (may contain whitespace, signs, digits, letters)
+# Output: int (parsed integer, clamped to [-2^31, 2^31-1])
 # Parse a string to 32-bit signed integer. Rules:
 #   1. Skip leading whitespace
 #   2. Optional '+' or '-' sign

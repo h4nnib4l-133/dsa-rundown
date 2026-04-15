@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Kth Smallest Element in BST (LC #230) -- Medium
+# Input:  root: TreeNode (BST), k: int (1-indexed)
+# Output: int (kth smallest value in the BST)
 # Find kth smallest value in BST.
 #
 #   Key: Inorder traversal (left -> root -> right), count to k

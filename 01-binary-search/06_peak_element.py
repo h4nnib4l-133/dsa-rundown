@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Find Peak Element (LC #162) -- Medium
+# Input:  nums: List[int] (nums[-1] = nums[n] = -inf, no adjacent equal)
+# Output: int (index of ANY peak element)
 # A peak element is strictly greater than its neighbors.
 # nums[-1] = nums[n] = -infinity. Return index of ANY peak.
 #

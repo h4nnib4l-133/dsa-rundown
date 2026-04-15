@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Next Greater Element I (LC #496) -- Easy
+# Input:  nums1: List[int] (subset of nums2), nums2: List[int] (no duplicates)
+# Output: List[int] (for each nums1[i], next greater element in nums2, or -1)
 # For each element in nums1, find next greater element in nums2.
 #
 #   Key: Monotonic decreasing stack. Process nums2, map each element to its next greater.

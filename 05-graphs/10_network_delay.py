@@ -17,6 +17,8 @@ import heapq
 
 
 # Network Delay Time (LC #743) -- Medium
+# Input:  times: List[[u, v, w]] (directed weighted edges), n: int, k: int (source)
+# Output: int (min time for all nodes to receive signal from k, or -1)
 # Min time for signal to reach all nodes from source.
 #
 #   Key: Dijkstra's algorithm. Answer = max of all shortest distances.

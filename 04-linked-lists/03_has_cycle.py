@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Linked List Cycle (LC #141) -- Easy
+# Input:  head: ListNode (or None, may contain cycle)
+# Output: bool (True if cycle exists)
 # Given head of linked list, return True if there is a cycle.
 # A cycle exists if some node's next points to a previous node.
 #

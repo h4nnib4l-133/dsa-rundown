@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Minimum Number of Arrows to Burst Balloons (LC #452) -- Medium
+# Input:  points: List[[start, end]] (balloon intervals on x-axis)
+# Output: int (minimum arrows to burst all balloons)
 # Balloons as intervals [start, end] on x-axis. Arrow shot at x bursts
 # all balloons where start <= x <= end.
 # Find minimum arrows to burst all balloons.

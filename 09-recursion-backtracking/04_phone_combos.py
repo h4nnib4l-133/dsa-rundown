@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Letter Combinations of Phone Number (LC #17) -- Medium
+# Input:  digits: str (string of digits '2'-'9')
+# Output: List[str] (all possible letter combinations)
 # Map digits to letters, generate all combinations.
 #
 #   Key: Backtrack through digits. For each digit, try all mapped letters.

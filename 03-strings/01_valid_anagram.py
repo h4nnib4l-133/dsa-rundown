@@ -17,6 +17,8 @@ from test_runner import run_tests
 
 
 # Valid Anagram (LC #242) -- Easy
+# Input:  s: str, t: str (lowercase English letters)
+# Output: bool (True if t is an anagram of s)
 # Given two strings s and t, return True if t is an anagram of s.
 # Anagram = same characters, same frequency, different order.
 #

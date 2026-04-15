@@ -15,6 +15,8 @@ from collections import deque
 
 
 # BFS Shortest Reach (HackerRank) -- Medium
+# Input:  n: int (nodes 0..n-1), edges: List[[u,v]] (undirected), start: int
+# Output: List[int] (shortest distance from start to each node, -1 if unreachable)
 # Find shortest distances from a start node to all others in unweighted graph.
 #
 #   Key: Standard BFS. Distance = level * edge_weight.

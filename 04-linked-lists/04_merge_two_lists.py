@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Merge Two Sorted Lists (LC #21) -- Easy
+# Input:  l1: ListNode (sorted), l2: ListNode (sorted)
+# Output: ListNode (merged sorted list)
 # Merge two sorted linked lists into one sorted list.
 # Made by splicing together the nodes of the first two lists.
 #

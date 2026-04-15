@@ -6,6 +6,8 @@ from test_runner import run_tests
 
 
 # Search Insert Position (LC #35) -- Easy
+# Input:  nums: List[int] (sorted ascending, no duplicates), target: int
+# Output: int (index of target, or index where it would be inserted)
 # Given sorted array and target, return index if found.
 # If not, return the index where it would be inserted to keep sorted.
 #

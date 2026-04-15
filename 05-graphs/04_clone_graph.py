@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Clone Graph (LC #133) -- Medium
+# Input:  node: GraphNode (.val: int, .neighbors: List[GraphNode])
+# Output: GraphNode (deep copy of entire connected graph)
 # Deep copy a connected undirected graph.
 # Each node has val and list of neighbors.
 # Must create new node objects (not reuse originals).

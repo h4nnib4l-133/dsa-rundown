@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Copy List with Random Pointer (LC #138) -- Medium
+# Input:  head: Node (each node has .val, .next, .random)
+# Output: Node (deep copy, new objects with same structure)
 # Deep copy a linked list where each node has next AND random pointer.
 # Random can point to any node in the list or None.
 #

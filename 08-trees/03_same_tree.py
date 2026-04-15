@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Same Tree (LC #100) -- Easy
+# Input:  root1: TreeNode, root2: TreeNode
+# Output: bool (True if structurally identical with same values)
 # Check if two trees are identical.
 #
 #   Key: Both null = true. One null = false. Same val + recurse both children.

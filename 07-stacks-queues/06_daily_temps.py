@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Daily Temperatures (LC #739) -- Medium
+# Input:  temperatures: List[int] (daily temperatures)
+# Output: List[int] (days until warmer temp, 0 if none)
 # Given array of temperatures, for each day, find how many days until warmer.
 # If no warmer day ahead, put 0.
 #

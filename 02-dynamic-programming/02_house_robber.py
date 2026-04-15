@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # House Robber (LC #198) -- Medium
+# Input:  nums: List[int] (money in each house, non-negative)
+# Output: int (max money without robbing adjacent houses)
 # Array of money in each house. Can't rob two adjacent houses.
 # Return max money you can rob.
 #

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Add Two Numbers (LC #2) -- Medium
+# Input:  l1: ListNode (digits in reverse order), l2: ListNode (same)
+# Output: ListNode (sum as reversed digit list)
 # Two non-empty linked lists represent non-negative integers in REVERSE order.
 # Each node is a single digit. Add them and return sum as linked list.
 #

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Candy (LC #135) -- Hard
+# Input:  ratings: List[int] (child ratings)
+# Output: int (minimum total candies)
 # Children in a line with ratings. Give candies such that:
 #   1. Each child gets at least 1 candy.
 #   2. Higher rating than neighbor -> more candy than that neighbor.

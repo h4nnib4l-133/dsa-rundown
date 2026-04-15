@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Linked List Cycle II (LC #142) -- Medium
+# Input:  head: ListNode (may have cycle)
+# Output: ListNode (node where cycle starts, or None)
 # If linked list has a cycle, return the NODE where cycle begins.
 # Return None if no cycle.
 #

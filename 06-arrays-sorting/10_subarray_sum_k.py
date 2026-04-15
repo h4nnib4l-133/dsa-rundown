@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Subarray Sum Equals K (LC #560) -- Medium
+# Input:  nums: List[int] (may have negatives), k: int
+# Output: int (count of contiguous subarrays summing to k)
 # Count the number of contiguous subarrays whose sum equals k.
 # Array can have negative numbers.
 #

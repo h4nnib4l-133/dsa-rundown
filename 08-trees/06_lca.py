@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Lowest Common Ancestor (LC #236) -- Medium
+# Input:  root: TreeNode, p_val: int, q_val: int (both exist in tree)
+# Output: int (value of lowest common ancestor node)
 # Find LCA of two nodes in binary tree.
 #
 #   Key: If current node is p or q, return it. If left and right both return non-null, current is LCA.

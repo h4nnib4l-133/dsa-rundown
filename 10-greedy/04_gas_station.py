@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Gas Station (LC #134) -- Medium
+# Input:  gas: List[int] (fuel at each station), cost: List[int] (fuel to next)
+# Output: int (starting station index, or -1 if impossible)
 # Circular route with n gas stations. gas[i] = fuel gained at station i.
 # cost[i] = fuel needed to travel from station i to i+1.
 # Find starting station index to complete full circle, or -1 if impossible.

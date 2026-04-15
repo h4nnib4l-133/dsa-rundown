@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Sort Colors / Dutch National Flag (LC #75) -- Medium
+# Input:  nums: List[int] (only values 0, 1, 2; modify in-place)
+# Output: None (array sorted in-place) [we return nums for testing]
 # Array of 0s, 1s, 2s. Sort in-place in one pass.
 #
 # Example:

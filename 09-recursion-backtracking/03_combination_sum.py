@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Combination Sum (LC #39) -- Medium
+# Input:  candidates: List[int] (distinct, positive), target: int
+# Output: List[List[int]] (all combos summing to target, can reuse elements)
 # Find combinations that sum to target. Can reuse elements.
 #
 #   Key: Backtrack with start index. Include current element (don't advance index) or skip (advance).

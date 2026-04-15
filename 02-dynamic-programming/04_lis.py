@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Longest Increasing Subsequence (LC #300) -- Medium
+# Input:  nums: List[int] (unsorted integers)
+# Output: int (length of longest strictly increasing subsequence)
 # Find the length of the longest STRICTLY increasing subsequence.
 # Subsequence = not necessarily contiguous.
 #

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # First Bad Version (LC #278) -- Easy
+# Input:  n: int (total versions 1..n), isBadVersion: callable
+# Output: int (first version where isBadVersion returns True)
 # You have n versions [1, 2, ..., n]. One version is bad, and all after it are bad.
 # Given isBadVersion(v) API, find the first bad version.
 #

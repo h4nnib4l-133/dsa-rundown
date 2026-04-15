@@ -21,6 +21,8 @@ from test_runner import run_tests
 
 
 # Best Time to Buy and Sell Stock II (LC #122) -- Medium
+# Input:  prices: List[int] (daily stock prices)
+# Output: int (max profit with unlimited buy/sell transactions)
 # Can make unlimited transactions (buy/sell). Find max profit.
 # Must sell before buying again. Can buy and sell same day.
 #

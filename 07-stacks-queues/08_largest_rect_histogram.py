@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Largest Rectangle in Histogram (LC #84) -- Hard
+# Input:  heights: List[int] (bar heights >= 0)
+# Output: int (area of largest rectangle formed by contiguous bars)
 # Given array of bar heights, find area of largest rectangle.
 # Rectangle must be formed by contiguous bars.
 #

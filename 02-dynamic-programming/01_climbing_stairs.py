@@ -23,6 +23,8 @@ from test_runner import run_tests
 
 
 # Climbing Stairs (LC #70) -- Easy
+# Input:  n: int (number of steps, n >= 0)
+# Output: int (number of distinct ways to climb)
 # You're climbing a staircase of n steps. Each time you can climb 1 or 2 steps.
 # How many distinct ways can you reach the top?
 #

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Merge Intervals (LC #56) -- Medium
+# Input:  intervals: List[[start, end]] (may be unsorted)
+# Output: List[[start, end]] (merged non-overlapping intervals)
 # Given array of intervals [start, end], merge all overlapping intervals.
 #
 # Example:

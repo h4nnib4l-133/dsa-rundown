@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Implement Stack using Queues (LC #225) -- Easy
+# Input:  operations: push(x), pop(), top(), empty()
+# Output: LIFO stack behavior using only FIFO queues
 # LIFO stack using queues.
 #
 #   Key: On push, enqueue to q2, then transfer q1 -> q2, swap q1 and q2

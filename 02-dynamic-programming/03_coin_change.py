@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Coin Change (LC #322) -- Medium
+# Input:  coins: List[int] (denominations > 0), amount: int (>= 0)
+# Output: int (fewest coins to make amount, or -1 if impossible)
 # Given coin denominations and an amount, find fewest coins to make that amount.
 # Unlimited supply of each coin. Return -1 if impossible.
 #

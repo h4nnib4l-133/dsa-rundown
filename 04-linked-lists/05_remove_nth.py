@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Remove Nth Node From End of List (LC #19) -- Medium
+# Input:  head: ListNode, n: int (1 <= n <= list length)
+# Output: ListNode (head after removing nth node from end)
 # Remove the nth node from the END of the list. Return modified head.
 # Guaranteed n is valid.
 #

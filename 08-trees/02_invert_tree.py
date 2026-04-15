@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Invert Binary Tree (LC #226) -- Easy
+# Input:  root: TreeNode (or None)
+# Output: TreeNode (root of mirrored tree)
 # Mirror a binary tree.
 #
 #   Key: Swap left and right children recursively

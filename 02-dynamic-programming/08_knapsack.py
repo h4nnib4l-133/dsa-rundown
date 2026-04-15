@@ -3,7 +3,9 @@ from test_runner import run_tests
 
 
 
-# 0/1 Knapsack -- Medium
+# 0/1 Knapsack (GFG) -- Medium
+# Input:  weights: List[int], values: List[int], capacity: int
+# Output: int (max total value fitting within capacity)
 # Given n items with weights and values, and a knapsack capacity.
 # Each item can be used at most once. Maximize total value.
 #

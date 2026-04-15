@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Serialize and Deserialize Binary Tree (LC #297) -- Hard
+# Input:  root: TreeNode (serialize) / data: str (deserialize)
+# Output: str (serialize) / TreeNode (deserialize)
 # Convert tree to string and back.
 #
 #   Key: Preorder with null markers. Serialize: `"1,2,#,#,3,4,#,#,5,#,#"`. Deserialize with queue/index.

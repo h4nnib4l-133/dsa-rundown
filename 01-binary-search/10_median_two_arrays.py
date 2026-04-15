@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Median of Two Sorted Arrays (LC #4) -- Hard
+# Input:  nums1: List[int] (sorted), nums2: List[int] (sorted)
+# Output: float (median of merged array)
 # Find the median of two sorted arrays. Must be O(log(min(m,n))).
 #
 # Example:

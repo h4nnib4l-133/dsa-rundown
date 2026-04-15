@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Search a 2D Matrix (LC #74) -- Medium
+# Input:  matrix: List[List[int]] (rows sorted, row[0] > prev row[-1]), target: int
+# Output: bool (True if target found)
 # m x n matrix where:
 #   - each row is sorted left to right
 #   - first element of each row > last element of previous row

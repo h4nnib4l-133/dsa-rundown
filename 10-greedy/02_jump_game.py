@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Jump Game (LC #55) -- Medium
+# Input:  nums: List[int] (max jump length at each position)
+# Output: bool (True if you can reach the last index)
 # Array of max jump lengths. Start at index 0.
 # Return True if you can reach the last index.
 #

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Container With Most Water (LC #11) -- Medium
+# Input:  height: List[int] (bar heights, len >= 2)
+# Output: int (max water area between two bars)
 # Array of heights. Find two lines that form container holding most water.
 # Width = distance between lines. Height = shorter line.
 #

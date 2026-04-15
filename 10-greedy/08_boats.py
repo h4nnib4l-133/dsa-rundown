@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Boats to Save People (LC #881) -- Medium
+# Input:  people: List[int] (weights), limit: int (boat weight limit, max 2 people)
+# Output: int (minimum number of boats)
 # Each boat carries at most 2 people with weight limit.
 # Find minimum number of boats.
 #

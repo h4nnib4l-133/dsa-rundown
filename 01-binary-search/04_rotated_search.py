@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Search in Rotated Sorted Array (LC #33) -- Medium
+# Input:  nums: List[int] (sorted then rotated, no duplicates), target: int
+# Output: int (index of target, or -1)
 # Array was sorted, then rotated at unknown pivot.
 # Search for target in O(log n). No duplicates.
 #

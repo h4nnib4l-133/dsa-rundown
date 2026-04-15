@@ -18,6 +18,8 @@ from test_runner import run_tests
 
 
 # Valid Parentheses (LC #20) -- Easy
+# Input:  s: str (only contains '(', ')', '{', '}', '[', ']')
+# Output: bool (True if brackets are balanced and properly nested)
 # Given string of '(', ')', '{', '}', '[', ']', check if it's balanced.
 # Every open bracket must be closed by same type in correct order.
 #

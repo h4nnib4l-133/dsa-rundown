@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Evaluate Reverse Polish Notation (LC #150) -- Medium
+# Input:  tokens: List[str] (numbers and operators "+", "-", "*", "/")
+# Output: int (result of evaluating the postfix expression)
 # Evaluate postfix expression.
 #
 #   Key: Push numbers. On operator, pop two, compute, push result.

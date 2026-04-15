@@ -16,6 +16,8 @@ from test_runner import run_tests
 
 
 # Two Sum (LC #1) -- Easy
+# Input:  nums: List[int] (unsorted), target: int
+# Output: List[int] (two indices that add up to target, exactly one solution)
 # Given array and target, return indices of two numbers that add up to target.
 # Exactly one solution exists. Can't use same element twice.
 #

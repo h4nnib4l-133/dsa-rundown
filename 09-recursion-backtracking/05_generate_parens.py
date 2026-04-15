@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Generate Parentheses (LC #22) -- Medium
+# Input:  n: int (number of pairs of parentheses)
+# Output: List[str] (all valid combinations)
 # Generate all valid combinations of n pairs of parentheses.
 #
 #   Key: Track open/close count. Can add `(` if open < n. Can add `)` if close < open.

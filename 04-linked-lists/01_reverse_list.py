@@ -52,6 +52,8 @@ def to_array(head):
 
 
 # Reverse Linked List (LC #206) -- Easy
+# Input:  head: ListNode (or None)
+# Output: ListNode (new head of reversed list)
 # Reverse a singly linked list.
 #
 #   Key: Three pointers: prev, curr, next. Or recursive.

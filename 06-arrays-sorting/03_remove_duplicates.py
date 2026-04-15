@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Remove Duplicates from Sorted Array (LC #26) -- Easy
+# Input:  nums: List[int] (sorted ascending, modify in-place)
+# Output: int (number of unique elements, first k elements are unique)
 # Remove duplicates in-place from sorted array.
 # Return new length k. First k elements should have unique values in order.
 #

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Pacific Atlantic Water Flow (LC #417) -- Medium
+# Input:  heights: List[List[int]] (m x n grid of elevations)
+# Output: List[[row, col]] (cells that can flow to both oceans)
 # m x n island. Pacific ocean touches top and left edges.
 # Atlantic ocean touches bottom and right edges.
 # Water flows from higher/equal cells to lower/equal cells (4-directional).

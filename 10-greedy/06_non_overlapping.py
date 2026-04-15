@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Non-overlapping Intervals (LC #435) -- Medium
+# Input:  intervals: List[[start, end]]
+# Output: int (min intervals to remove so rest don't overlap)
 # Given intervals, find MINIMUM number to REMOVE so rest don't overlap.
 #
 # Example:

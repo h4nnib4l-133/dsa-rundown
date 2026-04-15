@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Course Schedule (LC #207) -- Medium
+# Input:  numCourses: int, prerequisites: List[[course, prereq]]
+# Output: bool (True if all courses can be finished, i.e. no cycle)
 # There are numCourses courses. prerequisites[i] = [a, b] means
 # you must take course b before course a.
 # Return True if you can finish all courses (no cycle in dependency graph).

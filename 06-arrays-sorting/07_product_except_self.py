@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Product of Array Except Self (LC #238) -- Medium
+# Input:  nums: List[int] (len >= 2, product fits in 32-bit int)
+# Output: List[int] (output[i] = product of all nums except nums[i])
 # Return array where output[i] = product of all nums except nums[i].
 # Must be O(n) without using division.
 #

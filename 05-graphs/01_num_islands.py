@@ -22,6 +22,8 @@ from test_runner import run_tests
 
 
 # Number of Islands (LC #200) -- Medium
+# Input:  grid: List[List[str]] ('1' = land, '0' = water)
+# Output: int (number of islands)
 # Given 2D grid of '1' (land) and '0' (water), count number of islands.
 # An island is surrounded by water and formed by connecting adjacent lands
 # (horizontal/vertical, NOT diagonal).

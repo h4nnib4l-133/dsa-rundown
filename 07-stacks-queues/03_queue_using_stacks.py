@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Implement Queue using Stacks (LC #232) -- Easy
+# Input:  operations: push(x), pop(), peek(), empty()
+# Output: FIFO queue behavior using only LIFO stacks
 # FIFO queue using two LIFO stacks.
 #
 #   Key: Push to stack1. For pop, transfer stack1 -> stack2 if stack2 empty.

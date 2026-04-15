@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Task Scheduler (LC #621) -- Medium
+# Input:  tasks: List[str] (e.g. ["A","A","B"]), n: int (cooldown between same tasks)
+# Output: int (minimum time intervals to finish all tasks)
 # Given tasks (chars) and cooldown n, find minimum time intervals.
 # Same task must have at least n intervals between executions.
 # Can insert idle slots if needed.

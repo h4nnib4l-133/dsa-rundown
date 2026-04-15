@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Word Break (LC #139) -- Medium
+# Input:  s: str, word_dict: List[str]
+# Output: bool (True if s can be segmented into words from dict)
 # Given string s and dictionary of words, can s be segmented into
 # a sequence of dictionary words?
 #

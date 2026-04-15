@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Binary Tree Level Order Traversal (LC #102) -- Medium
+# Input:  root: TreeNode (or None)
+# Output: List[List[int]] (values grouped by level, top to bottom)
 # Return nodes grouped by level.
 #
 #   Key: BFS with queue. Process all nodes at current level before moving to next.

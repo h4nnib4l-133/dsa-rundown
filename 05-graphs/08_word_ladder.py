@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Word Ladder (LC #127) -- Hard
+# Input:  beginWord: str, endWord: str, wordList: List[str]
+# Output: int (length of shortest sequence including start+end, or 0)
 # Transform beginWord to endWord, changing one letter at a time.
 # Each intermediate word must be in wordList.
 # Return LENGTH of shortest transformation sequence (including start+end), or 0.

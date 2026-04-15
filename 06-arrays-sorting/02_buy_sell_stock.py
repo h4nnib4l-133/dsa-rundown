@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Best Time to Buy and Sell Stock (LC #121) -- Easy
+# Input:  prices: List[int] (daily stock prices)
+# Output: int (max profit from one buy + one sell, 0 if no profit)
 # Given daily prices, find max profit from one buy and one sell.
 # Must buy before you sell. Return 0 if no profit possible.
 #

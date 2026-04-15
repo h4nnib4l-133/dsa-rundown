@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Permutations (LC #46) -- Medium
+# Input:  nums: List[int] (distinct integers)
+# Output: List[List[int]] (all possible permutations)
 # Given array of DISTINCT integers, return all possible permutations.
 #
 # Example:

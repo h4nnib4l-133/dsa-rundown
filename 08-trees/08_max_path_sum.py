@@ -25,6 +25,8 @@ from collections import deque
 
 
 # Binary Tree Maximum Path Sum (LC #124) -- Hard
+# Input:  root: TreeNode (values can be negative)
+# Output: int (max sum of any path, path can start/end at any node)
 # Maximum path sum (path can start/end at any node).
 #
 #   Key: DFS returns max single-path through node. Update global max with `left + node + right`.

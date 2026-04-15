@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Edit Distance (LC #72) -- Medium
+# Input:  word1: str, word2: str
+# Output: int (min insert/delete/replace operations to transform word1 -> word2)
 # Given two words, find minimum operations to convert word1 to word2.
 # Operations: insert a char, delete a char, replace a char.
 #

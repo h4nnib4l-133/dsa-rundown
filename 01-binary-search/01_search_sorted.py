@@ -31,6 +31,8 @@ from test_runner import run_tests
 
 
 # Binary Search (LC #704) -- Easy
+# Input:  nums: List[int] (sorted ascending), target: int
+# Output: int (index of target, or -1 if not found)
 # Given a sorted array and a target, return the index of target or -1.
 #
 # Example:

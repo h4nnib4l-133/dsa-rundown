@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # N-Queens (LC #51) -- Hard
+# Input:  n: int (board size n x n)
+# Output: int (number of valid queen placements)
 # Place N queens on NxN board so no two queens attack each other.
 # Return the NUMBER of distinct solutions.
 # (Queens attack same row, column, or diagonal.)

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Number of Connected Components (LC #323) -- Medium
+# Input:  n: int (nodes 0..n-1), edges: List[[u,v]] (undirected)
+# Output: int (number of connected components)
 # Given n nodes and undirected edges, count connected components.
 #
 # Example:

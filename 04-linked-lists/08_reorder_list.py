@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Reorder List (LC #143) -- Medium
+# Input:  head: ListNode (modify in-place)
+# Output: None (list reordered: L0->Ln->L1->Ln-1->...)
 # Reorder in-place: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 -> ...
 #
 # Example:

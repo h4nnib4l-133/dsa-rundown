@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Longest Palindromic Substring (LC #5) -- Medium
+# Input:  s: str (1 <= len(s) <= 1000)
+# Output: str (longest palindromic substring)
 # Find the longest substring that is a palindrome.
 #
 # Example:

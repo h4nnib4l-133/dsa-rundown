@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Trapping Rain Water (LC #42) -- Hard
+# Input:  height: List[int] (bar heights >= 0)
+# Output: int (total water trapped between bars)
 # Given array of bar heights, compute how much rain water is trapped.
 #
 # Example:

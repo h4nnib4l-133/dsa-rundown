@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Middle of the Linked List (LC #876) -- Easy
+# Input:  head: ListNode (non-empty)
+# Output: ListNode (middle node; if two middles, return second)
 # Return the middle node. If two middle nodes, return the second one.
 #
 # Example:

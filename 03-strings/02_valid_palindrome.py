@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Valid Palindrome (LC #125) -- Easy
+# Input:  s: str (may contain any characters)
+# Output: bool (True if palindrome, considering only alphanumeric, case-insensitive)
 # Check if string is a palindrome, considering only alphanumeric characters
 # and ignoring case.
 #

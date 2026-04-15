@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Rotting Oranges (LC #994) -- Medium
+# Input:  grid: List[List[int]] (0=empty, 1=fresh, 2=rotten)
+# Output: int (minutes until all rotten, or -1 if impossible)
 # Grid: 0=empty, 1=fresh orange, 2=rotten orange.
 # Each minute, fresh oranges adjacent (4-dir) to rotten ones become rotten.
 # Return minutes until no fresh oranges remain, or -1 if impossible.

@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Palindrome Partitioning (LC #131) -- Medium
+# Input:  s: str
+# Output: List[List[str]] (all ways to partition so every part is palindrome)
 # Partition string so every part is a palindrome.
 #
 #   Key: Backtrack with start index. For each end position, if substring is palindrome, recurse on remainder.

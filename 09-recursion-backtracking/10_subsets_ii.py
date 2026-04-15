@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Subsets II (LC #90) -- Medium
+# Input:  nums: List[int] (may contain duplicates)
+# Output: List[List[int]] (all unique subsets)
 # Generate all subsets when array may contain duplicates.
 #
 #   Key: Sort first. Skip duplicate elements at same recursion level: `if i > start and nums[i] == nums[i-1]: continue`

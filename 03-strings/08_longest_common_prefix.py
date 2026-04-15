@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Longest Common Prefix (LC #14) -- Easy
+# Input:  strs: List[str]
+# Output: str (longest common prefix, or "")
 # Find the longest common prefix among an array of strings.
 # Return "" if no common prefix.
 #

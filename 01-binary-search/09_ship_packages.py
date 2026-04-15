@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Capacity to Ship Packages Within D Days (LC #1011) -- Medium
+# Input:  weights: List[int] (package weights in order), days: int
+# Output: int (minimum ship capacity)
 # Packages must be shipped in order. Find minimum ship capacity
 # to ship all packages within 'days' days.
 #

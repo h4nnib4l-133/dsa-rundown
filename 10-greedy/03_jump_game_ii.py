@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Jump Game II (LC #45) -- Medium
+# Input:  nums: List[int] (max jump length, guaranteed reachable)
+# Output: int (minimum number of jumps to reach last index)
 # Minimum jumps to reach last index.
 #
 #   Key: BFS-style greedy. Track current end and farthest. When i reaches current end, jump.

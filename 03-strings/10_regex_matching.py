@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Regular Expression Matching (LC #10) -- Hard
+# Input:  s: str (lowercase a-z), p: str (lowercase a-z, '.', '*')
+# Output: bool (True if p matches entire string s)
 # Implement regex matching with '.' and '*'.
 #   '.' matches any single character.
 #   '*' matches zero or more of the PRECEDING element.

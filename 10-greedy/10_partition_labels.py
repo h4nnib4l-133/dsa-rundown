@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Partition Labels (LC #763) -- Medium
+# Input:  s: str (lowercase English letters)
+# Output: List[int] (lengths of maximum partitions where each letter is in one part)
 # Partition string into maximum parts so each letter appears in at most one part.
 # Return list of part lengths.
 #

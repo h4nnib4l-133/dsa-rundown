@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Min Stack (LC #155) -- Medium
+# Input:  operations: push(val), pop(), top(), getMin()
+# Output: all operations must be O(1)
 # Stack with push, pop, top, getMin all in O(1).
 #
 #   Key: Auxiliary stack tracking minimum at each level

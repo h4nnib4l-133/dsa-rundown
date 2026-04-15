@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Koko Eating Bananas (LC #875) -- Medium
+# Input:  piles: List[int] (pile sizes > 0), h: int (hours, h >= len(piles))
+# Output: int (minimum eating speed k)
 # Koko eats bananas at speed k (bananas/hour). She has h hours.
 # Each hour she picks a pile and eats k bananas from it.
 # If pile has < k bananas, she eats the whole pile and waits.

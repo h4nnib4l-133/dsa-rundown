@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Longest Palindromic Substring (LC #5) -- Medium
+# Input:  s: str
+# Output: str (longest palindromic substring, any valid answer if tie)
 # (Same as DP version -- can solve with expand-around-center here)
 #
 # Example:

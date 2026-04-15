@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Unique Paths (LC #62) -- Medium
+# Input:  m: int (rows), n: int (cols), both >= 1
+# Output: int (number of unique paths from top-left to bottom-right)
 # Robot at top-left of m x n grid. Can only move right or down.
 # Count distinct paths to bottom-right corner.
 #

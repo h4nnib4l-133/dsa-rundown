@@ -22,6 +22,8 @@ from collections import deque
 
 
 # Sliding Window Maximum (LC #239) -- Hard
+# Input:  nums: List[int], k: int (window size, 1 <= k <= len(nums))
+# Output: List[int] (max value in each window position)
 # Max element in each sliding window of size k.
 #
 #   Key: Monotonic decreasing deque. Front = current max. Remove from back if smaller.

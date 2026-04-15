@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Sudoku Solver (LC #37) -- Hard
+# Input:  board: List[List[str]] (9x9, '.' = empty, '1'-'9' = filled)
+# Output: None (modify board in-place to solve)
 # Fill valid Sudoku board.
 #
 #   Key: Find empty cell, try 1-9, validate row/col/box, backtrack if stuck.

@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Longest Common Subsequence (LC #1143) -- Medium
+# Input:  text1: str, text2: str
+# Output: int (length of longest common subsequence)
 # Given two strings, find the length of their longest common subsequence.
 # Subsequence = chars in order but not necessarily contiguous.
 #

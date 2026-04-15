@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Merge K Sorted Lists (LC #23) -- Hard
+# Input:  lists: List[ListNode] (each list sorted)
+# Output: ListNode (single merged sorted list)
 # Given array of k sorted linked lists, merge into one sorted list.
 #
 # Example:

@@ -3,6 +3,8 @@ from test_runner import run_tests
 
 
 # Word Search (LC #79) -- Medium
+# Input:  board: List[List[str]] (m x n grid of chars), word: str
+# Output: bool (True if word exists following adjacent cells)
 # Find if word exists in 2D grid following adjacent cells.
 #
 #   Key: DFS from each cell. Mark visited (set to '#'), restore after backtrack.

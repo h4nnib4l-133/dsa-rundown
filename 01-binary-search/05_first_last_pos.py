@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Find First and Last Position of Element (LC #34) -- Medium
+# Input:  nums: List[int] (sorted ascending, may have duplicates), target: int
+# Output: List[int] of length 2: [first_index, last_index] or [-1, -1]
 # Given sorted array, find starting and ending position of target.
 # Return [-1, -1] if not found. Must be O(log n).
 #

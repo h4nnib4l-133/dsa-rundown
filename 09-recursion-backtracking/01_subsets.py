@@ -33,6 +33,8 @@ from test_runner import run_tests
 
 
 # Subsets (LC #78) -- Medium
+# Input:  nums: List[int] (distinct integers)
+# Output: List[List[int]] (all possible subsets / power set)
 # Given array of DISTINCT integers, return all possible subsets (power set).
 #
 # Example:

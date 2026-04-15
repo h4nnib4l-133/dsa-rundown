@@ -4,6 +4,8 @@ from collections import deque
 
 
 # Construct Tree from Preorder and Inorder (LC #105) -- Medium
+# Input:  preorder: List[int], inorder: List[int] (no duplicates)
+# Output: TreeNode (root of constructed tree)
 # Build tree from preorder and inorder traversal arrays.
 #
 #   Key: First element of preorder = root. Find root in inorder to split left/right subtrees.

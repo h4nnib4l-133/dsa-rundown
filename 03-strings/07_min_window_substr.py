@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Minimum Window Substring (LC #76) -- Hard
+# Input:  s: str (haystack), t: str (chars to find, may have duplicates)
+# Output: str (smallest window of s containing all chars of t, or "")
 # Find smallest substring of s containing ALL characters of t (including duplicates).
 # Return "" if no such window exists.
 #

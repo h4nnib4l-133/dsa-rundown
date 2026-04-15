@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Is Graph Bipartite? (LC #785) -- Medium
+# Input:  graph: List[List[int]] (adjacency list, graph[i] = neighbors of i)
+# Output: bool (True if graph is 2-colorable)
 # Can you color the graph with 2 colors so no adjacent nodes share a color?
 # graph[i] = list of neighbors of node i.
 #

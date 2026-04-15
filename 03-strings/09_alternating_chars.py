@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Alternating Characters (HackerRank) -- Easy
+# Input:  s: str (only 'A' and 'B')
+# Output: int (min deletions so no two adjacent chars are same)
 # Given a string of 'A' and 'B', count minimum deletions
 # so that no two adjacent characters are the same.
 #

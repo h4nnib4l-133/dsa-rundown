@@ -4,6 +4,8 @@ from test_runner import run_tests
 
 
 # Longest Substring Without Repeating Characters (LC #3) -- Medium
+# Input:  s: str (may contain any characters)
+# Output: int (length of longest substring with all unique characters)
 # Find the length of the longest substring with all unique characters.
 #
 # Example:
