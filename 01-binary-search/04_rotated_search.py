@@ -1,7 +1,8 @@
-import sys, os; sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from test_runner import run_tests
-
-
 
 # Search in Rotated Sorted Array (LC #33) -- Medium
 # Input:  nums: List[int] (sorted then rotated, no duplicates), target: int
@@ -19,21 +20,41 @@ from test_runner import run_tests
 #        If target is in the sorted half's range, search there.
 #        Otherwise search the other half.
 
+
 def search_rotated(nums, target):
-    pass
+    lo, hi = 0, len(nums) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if nums[mid] == target:
+            return mid
+
+        if nums[lo] <= nums[mid]:
+            if nums[lo] <= target < nums[mid]:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        else:
+            if nums[mid] < target <= nums[hi]:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+    return -1
 
 
-run_tests(search_rotated, [
-    (([4,5,6,7,0,1,2], 0),    4),     # target in right (unsorted) half
-    (([4,5,6,7,0,1,2], 5),    1),     # target in left (sorted) half
-    (([4,5,6,7,0,1,2], 3),   -1),     # not in array
-    (([4,5,6,7,0,1,2], 4),    0),     # first element
-    (([4,5,6,7,0,1,2], 2),    6),     # last element
-    (([1], 0),                -1),     # single element, miss
-    (([1], 1),                 0),     # single element, hit
-    (([3,1], 1),               1),     # two elements, rotated
-    (([3,1], 3),               0),     # two elements, first
-    (([5,1,2,3,4], 1),        1),     # rotated by 1
-    (([1,2,3,4,5], 3),        2),     # not rotated at all
-    (([2,1], 1),               1),     # minimum rotation
-])
+run_tests(
+    search_rotated,
+    [
+        (([4, 5, 6, 7, 0, 1, 2], 0), 4),  # target in right (unsorted) half
+        (([4, 5, 6, 7, 0, 1, 2], 5), 1),  # target in left (sorted) half
+        (([4, 5, 6, 7, 0, 1, 2], 3), -1),  # not in array
+        (([4, 5, 6, 7, 0, 1, 2], 4), 0),  # first element
+        (([4, 5, 6, 7, 0, 1, 2], 2), 6),  # last element
+        (([1], 0), -1),  # single element, miss
+        (([1], 1), 0),  # single element, hit
+        (([3, 1], 1), 1),  # two elements, rotated
+        (([3, 1], 3), 0),  # two elements, first
+        (([5, 1, 2, 3, 4], 1), 1),  # rotated by 1
+        (([1, 2, 3, 4, 5], 3), 2),  # not rotated at all
+        (([2, 1], 1), 1),  # minimum rotation
+    ],
+)
