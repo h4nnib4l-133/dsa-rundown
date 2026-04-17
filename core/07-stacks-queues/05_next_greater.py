@@ -1,0 +1,23 @@
+import os, sys
+_d = os.path.dirname(os.path.abspath(__file__))
+while _d and not os.path.exists(os.path.join(_d, 'test_runner.py')):
+    _d = os.path.dirname(_d)
+sys.path.insert(0, _d)
+from test_runner import run_tests
+
+
+# Next Greater Element I (LC #496) -- Easy
+# Input:  nums1: List[int] (subset of nums2), nums2: List[int] (no duplicates)
+# Output: List[int] (for each nums1[i], next greater element in nums2, or -1)
+# For each element in nums1, find next greater element in nums2.
+#
+#   Key: Monotonic decreasing stack. Process nums2, map each element to its next greater.
+
+def next_greater_element(nums1, nums2):
+    pass
+
+
+run_tests(next_greater_element, [
+    (([4,1,2], [1,3,4,2]),  [-1,3,-1]),
+    (([2,4], [1,2,3,4]),    [3,-1]),
+])

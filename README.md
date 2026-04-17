@@ -1,82 +1,74 @@
-# DSA Revision for HackerRank
+# DSA Revision
 
-~150 Python problems organized by topic AND by sub-pattern.
+250 Python problems organized by topic and pattern.
 
 ## Start Here
 
-1. Open `PROGRESS.md` -- that's your checklist
-2. Pick a topic folder
-3. Open a `.py` file -- read the problem description at the top, then write the function
-4. Run it: `python3 <path>/<file>.py`
-5. Move to the next problem
+1. Open `PROGRESS.md` -- the checklist
+2. Pick a folder based on what you want to practice
+3. Open a `.py` file: problem description is at the top
+4. Write the function, run it: `python3 <path>/<file>.py`
 
 ## Structure
 
-### Core topics (100 problems, 10 per topic)
-
 ```
-01-binary-search/           Binary search patterns
-02-dynamic-programming/     1D, 2D, knapsack, string DP
-03-strings/                 Sliding window, two pointers
-04-linked-lists/            Pointer manipulation
-05-graphs/                  BFS, DFS, toposort, Dijkstra
-06-arrays-sorting/          Two pointers, prefix sums, intervals
-07-stacks-queues/           Monotonic stack, deque
-08-trees/                   Traversals, BST
-09-recursion-backtracking/  Subsets, permutations
-10-greedy/                  Interval scheduling
+core/                          100 problems -- standard topic revision
+  01-binary-search/            (10)
+  02-dynamic-programming/      (10)
+  03-strings/                  (10)
+  04-linked-lists/             (10)
+  05-graphs/                   (10)
+  06-arrays-sorting/           (10)
+  07-stacks-queues/            (10)
+  08-trees/                    (10)
+  09-recursion-backtracking/   (10)
+  10-greedy/                   (10)
+
+dp-patterns/                   50 problems -- DP sub-patterns
+  01-subarray-kadane/          (5 algo + 5 app)
+  02-stock-state-machine/      (5 algo + 5 app)
+  03-knapsack-variants/        (5 algo + 5 app)
+  04-grid-dp/                  (5 algo + 5 app)
+  05-string-sequence-dp/       (5 algo + 5 app)
+
+graph-patterns/                50 problems -- graph sub-patterns
+  01-bfs/                      (5 algo + 5 app)
+  02-dfs/                      (5 algo + 5 app)
+  03-shortest-path/            (5 algo + 5 app)
+  04-union-find/               (5 algo + 5 app)
+  05-topological-sort/         (5 algo + 5 app)
+
+hybrid-patterns/               50 problems -- DP + Graph combined
+  01-bitmask-dp-graph/         (5 algo + 5 app)  TSP, visit all nodes
+  02-dag-dp/                   (5 algo + 5 app)  topsort + DP
+  03-shortest-path-as-dp/      (5 algo + 5 app)  Bellman-Ford, weighted BFS
+  04-tree-dp/                  (5 algo + 5 app)  House Robber III, cameras
+  05-grid-dp-as-graph/         (5 algo + 5 app)  Cherry Pickup, Dungeon
 ```
 
-### Sub-pattern drills — "Algorithm-focused"
+## algo_ vs app_ prefix
 
-```
-11-dp-algo/
-  01-subarray-kadane/            Kadane patterns, subarray sums
-  02-stock-state-machine/        Buy/sell with states
-  03-knapsack-variants/          0/1, unbounded, multi-dim
-  04-grid-dp/                    Grid traversal DP
-  05-string-sequence-dp/         LCS, edit distance family
+Within pattern folders:
 
-12-graph-algo/
-  01-grid-bfs-dfs/               Flood fill, multi-source BFS
-  02-topological-sort/           Kahn's / DFS post-order
-  03-shortest-path/              Dijkstra, Bellman-Ford
-  04-union-find/                 Connected components
-  05-cycle-detection/            Directed vs undirected
-```
+- **algo_*.py** — direct algorithm practice. The problem statement explicitly
+  asks for the pattern (e.g., "implement shortest path").
+- **app_*.py** — story problems. Harder: you must RECOGNIZE which pattern to use.
+  (e.g., "Minimum cookies to distribute fairly" = bitmask DP.)
 
-### Sub-pattern drills — "Application-focused"
-
-These look like story problems — the challenge is **identifying which pattern to use**.
-
-```
-13-dp-applications/
-  01-subarray-kadane/            Transform + Kadane (like Max Server Redundancy)
-  02-stock-state-machine/        Real-world state machines (House Robber II, etc.)
-  03-knapsack-variants/          Disguised knapsack (Perfect Squares, etc.)
-  04-grid-dp/                    Paint House, Paint Fence style
-  05-string-sequence-dp/         Subsequence counting problems
-
-14-graph-applications/
-  01-bfs-shortest-path/          Open Lock, Word Ladder, Bus Routes
-  02-dfs-connectivity/           Keys and Rooms, Evaluate Division
-  03-union-find-grouping/        Smallest String w/ Swaps, Accounts Merge
-  04-topological-ordering/       Alien Dict, Parallel Courses, Recipes
-  05-graph-modeling/             Sliding Puzzle, Reconstruct Itinerary
-                                 (problems that LOOK non-graph but ARE)
-```
+This split is deliberate: knowing an algorithm and recognizing when to apply it
+are different skills. Application problems train the second one.
 
 ## Running
 
 ```bash
 cd ~/PC/dsa-revision
-python3 01-binary-search/01_search_sorted.py
-python3 14-graph-applications/05-graph-modeling/01_sliding_puzzle.py
+python3 core/01-binary-search/01_search_sorted.py
+python3 hybrid-patterns/04-tree-dp/algo_04_binary_tree_cameras.py
 ```
 
-## File format
+Imports work at any depth — the test runner auto-locates the repo root.
 
-Every `.py` file has this structure:
+## File format
 
 ```python
 # Problem Name (LC #xxx) -- Difficulty
@@ -85,28 +77,28 @@ Every `.py` file has this structure:
 # Description
 #
 # Example:
-#   input -> output  (why)
+#   input -> output  (explanation)
 #
+#   Pattern: BFS / Kadane / etc.
 #   Key: algorithm hint
 
 def solve(...):
-    pass      # <-- you write here
+    pass                  # <-- write solution here
 
-run_tests(solve, [
-    # tests pre-written
-])
+run_tests(solve, [...])   # pre-written tests
 ```
 
 ## Timeline (2 days)
 
-- **Day 1**: Core topics 01-05 + dip into sub-patterns 11, 12
-- **Day 2**: Core topics 06-10 + application problems 13, 14
+- **Day 1**: core/ (topics 01–05) + dip into dp-patterns/ and graph-patterns/
+- **Day 2**: core/ (topics 06–10) + application drills + hybrid-patterns/
 
-## Key idea
+## Totals
 
-- **Algo folders (11, 12)** — drill the pattern itself
-- **Application folders (13, 14)** — practice IDENTIFYING the pattern from a story
-
-The hardest part of interviews is recognizing "this story problem wants Dijkstra"
-or "this needs Kadane with a transformation." That's what the application
-folders train.
+| Section | Problems |
+|---|---|
+| core | 100 |
+| dp-patterns | 50 |
+| graph-patterns | 50 |
+| hybrid-patterns | 50 |
+| **Total** | **250** |
