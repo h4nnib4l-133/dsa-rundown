@@ -1,6 +1,6 @@
 # DSA Revision
 
-250 Python problems organized by topic and pattern.
+300 Python problems organized by topic and pattern.
 
 ## Start Here
 
@@ -39,34 +39,36 @@ graph-patterns/                50 problems -- graph sub-patterns
   05-topological-sort/         (5 algo + 5 app)
 
 hybrid-patterns/               50 problems -- DP + Graph combined
-  01-bitmask-dp-graph/         (5 algo + 5 app)  TSP, visit all nodes
-  02-dag-dp/                   (5 algo + 5 app)  topsort + DP
-  03-shortest-path-as-dp/      (5 algo + 5 app)  Bellman-Ford, weighted BFS
-  04-tree-dp/                  (5 algo + 5 app)  House Robber III, cameras
-  05-grid-dp-as-graph/         (5 algo + 5 app)  Cherry Pickup, Dungeon
+  01-bitmask-dp-graph/         (5 algo + 5 app)
+  02-dag-dp/                   (5 algo + 5 app)
+  03-shortest-path-as-dp/      (5 algo + 5 app)
+  04-tree-dp/                  (5 algo + 5 app)
+  05-grid-dp-as-graph/         (5 algo + 5 app)
+
+greedy-patterns/               50 problems -- greedy sub-patterns
+  01-interval-scheduling/      (5 algo + 5 app)  meeting rooms, taps, events
+  02-heap-greedy/              (5 algo + 5 app)  IPO, furthest building
+  03-exchange-argument/        (5 algo + 5 app)  sort-by-custom-key, pairing
+  04-two-pointer-greedy/       (5 algo + 5 app)  sort+scan from both ends
+  05-sort-and-scan/            (5 algo + 5 app)  pair/reduce after sort
 ```
 
 ## algo_ vs app_ prefix
 
 Within pattern folders:
 
-- **algo_*.py** — direct algorithm practice. The problem statement explicitly
-  asks for the pattern (e.g., "implement shortest path").
-- **app_*.py** — story problems. Harder: you must RECOGNIZE which pattern to use.
-  (e.g., "Minimum cookies to distribute fairly" = bitmask DP.)
-
-This split is deliberate: knowing an algorithm and recognizing when to apply it
-are different skills. Application problems train the second one.
+- **algo_*.py** -- direct algorithm practice. The problem explicitly asks for the pattern.
+- **app_*.py** -- story problems. You must RECOGNIZE which pattern to use.
 
 ## Running
 
 ```bash
 cd ~/PC/dsa-revision
 python3 core/01-binary-search/01_search_sorted.py
-python3 hybrid-patterns/04-tree-dp/algo_04_binary_tree_cameras.py
+python3 greedy-patterns/02-heap-greedy/app_02_ipo.py
 ```
 
-Imports work at any depth — the test runner auto-locates the repo root.
+Imports auto-locate the repo root -- works at any depth.
 
 ## File format
 
@@ -77,21 +79,15 @@ Imports work at any depth — the test runner auto-locates the repo root.
 # Description
 #
 # Example:
-#   input -> output  (explanation)
+#   input -> output  (why)
 #
-#   Pattern: BFS / Kadane / etc.
-#   Key: algorithm hint
+#   Key / Greedy insight: algorithm hint
 
 def solve(...):
-    pass                  # <-- write solution here
+    pass                  # <-- write here
 
-run_tests(solve, [...])   # pre-written tests
+run_tests(solve, [...])   # tests pre-written
 ```
-
-## Timeline (2 days)
-
-- **Day 1**: core/ (topics 01–05) + dip into dp-patterns/ and graph-patterns/
-- **Day 2**: core/ (topics 06–10) + application drills + hybrid-patterns/
 
 ## Totals
 
@@ -101,4 +97,5 @@ run_tests(solve, [...])   # pre-written tests
 | dp-patterns | 50 |
 | graph-patterns | 50 |
 | hybrid-patterns | 50 |
-| **Total** | **250** |
+| greedy-patterns | 50 |
+| **Total** | **300** |
